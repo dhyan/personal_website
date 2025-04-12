@@ -140,7 +140,7 @@ nav li {
 }
 
 nav a {
-    color: var(--text-color);
+    color: var(--hover-color);
     text-decoration: none;
     font-weight: 500;
     padding: 0.8rem 1.2rem;
@@ -220,7 +220,7 @@ footer i.fa-smile {
 .home-button {
     padding: 0.8rem 1.5rem;
     border-radius: 30px;
-    color: var(--text-color);
+    color: var(--hover-color);
     background-color: var(--background-color);
     font-weight: 500;
     text-decoration: none;

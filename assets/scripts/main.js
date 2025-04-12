@@ -13,6 +13,21 @@ document.querySelectorAll('nav a').forEach(anchor => {
     });
 });
 
+// Smooth scrolling for home buttons
+document.querySelectorAll('.home-buttons a').forEach(button => {
+    button.addEventListener('click', function(e) {
+        e.preventDefault();
+        
+        const targetId = this.getAttribute('href');
+        const targetElement = document.querySelector(targetId);
+        
+        window.scrollTo({
+            top: targetElement.offsetTop - 70,
+            behavior: 'smooth'
+        });
+    });
+});
+
 // Dynamic year in the footer
 document.addEventListener('DOMContentLoaded', function() {
     const footerYear = document.querySelector('footer p');
@@ -26,18 +41,20 @@ document.addEventListener('DOMContentLoaded', function() {
     const body = document.body;
     const toggleBtn = document.createElement('button');
     toggleBtn.id = 'theme-toggle';
-    toggleBtn.innerHTML = '🌙';
+    toggleBtn.innerHTML = '☀️';
     toggleBtn.setAttribute('aria-label', 'Toggle Dark Mode');
     
     body.appendChild(toggleBtn);
     
-    // Check for saved theme preference or respect OS preference
-    const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
-    const storedTheme = localStorage.getItem('theme');
+    // Set dark mode as default
+    body.classList.add('dark-mode');
+    localStorage.setItem('theme', 'dark');
     
-    if (storedTheme === 'dark' || (!storedTheme && prefersDarkScheme.matches)) {
-        body.classList.add('dark-mode');
-        toggleBtn.innerHTML = '☀️';
+    // Only switch to light mode if explicitly stored
+    const storedTheme = localStorage.getItem('theme');
+    if (storedTheme === 'light') {
+        body.classList.remove('dark-mode');
+        toggleBtn.innerHTML = '🌙';
     }
     
     // Toggle function
