@@ -88,56 +88,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-// Handle contact form submission
-document.addEventListener('DOMContentLoaded', function() {
-    const contactForm = document.getElementById('contact-form');
-    
-    if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Get form values
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const message = document.getElementById('message').value;
-            
-            // Normally, you would send this data to a server
-            // For now, we'll just show a success message
-            
-            // Create success message
-            const successMessage = document.createElement('div');
-            successMessage.className = 'success-message neumorphic';
-            successMessage.setAttribute('role', 'alert');
-            successMessage.innerHTML = `
-                <p>Thanks for your message, ${name}!</p>
-                <p>I'll get back to you soon at ${email}.</p>
-            `;
-            successMessage.style.padding = '1.5rem';
-            successMessage.style.marginTop = '1.5rem';
-            
-            // Replace form with success message
-            contactForm.innerHTML = '';
-            contactForm.appendChild(successMessage);
-            
-            // Reset form after 5 seconds
-            setTimeout(() => {
-                contactForm.innerHTML = `
-                    <label for="name" class="visually-hidden">Name</label>
-                    <input type="text" id="name" placeholder="Name" required aria-required="true">
-                    
-                    <label for="email" class="visually-hidden">Email</label>
-                    <input type="email" id="email" placeholder="Email" required aria-required="true">
-                    
-                    <label for="message" class="visually-hidden">Message</label>
-                    <textarea id="message" placeholder="Message" required aria-required="true"></textarea>
-                    
-                    <button type="submit">Send</button>
-                `;
-            }, 5000);
-        });
-    }
-});
-
 // Project Toggle Functionality
 document.addEventListener('DOMContentLoaded', function() {
     const workToggle = document.getElementById('work-toggle');
