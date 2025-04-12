@@ -2,25 +2,45 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
     <link rel="stylesheet" href="assets/styles/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <title>Narendra Kumar | Neumorphic Portfolio</title>
     <!-- Add meta tags for SEO -->
-    <meta name="description" content="Personal website and portfolio of Your Name - Software Developer, Designer, and Creative Thinker">
+    <meta name="description" content="Personal website and portfolio of Narendra Kumar - Software Developer, Designer, and Creative Thinker">
     <meta name="keywords" content="portfolio, web development, design, software engineer, neumorphic">
     <meta name="author" content="Narendra Kumar">
     <!-- Open Graph meta tags for social sharing -->
-    <meta property="og:title" content="Your Name - Personal Website">
-    <meta property="og:description" content="Portfolio and personal website of Your Name">
+    <meta property="og:title" content="Narendra Kumar - Personal Website">
+    <meta property="og:description" content="Portfolio and personal website of Narendra Kumar">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://yourwebsite.com">
+    <!-- Mobile web app capable -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <!-- Theme color for browser -->
+    <meta name="theme-color" content="#f0ece3">
 </head>
 <body>
+    <!-- Mobile menu overlay -->
+    <div class="mobile-nav-overlay"></div>
+    
     <header role="banner">
         <div class="header-container">
             <img src="assets/images/yogi.png" alt="Yoga Programmer Logo" class="logo">
-            <nav role="navigation" aria-label="Main navigation">
+            <button class="mobile-menu-toggle tablet-only" aria-label="Toggle mobile menu" aria-expanded="false">
+                <i class="fas fa-bars"></i>
+            </button>
+            <button class="header-theme-toggle" aria-label="Toggle Dark Mode">
+                <span class="sun-icon">☀️</span>
+                <span class="moon-icon" style="display:none">🌙</span>
+            </button>
+            <button class="mobile-theme-toggle mobile-only" aria-label="Toggle Dark Mode">
+                <span class="sun-icon">☀️</span>
+                <span class="moon-icon" style="display:none">🌙</span>
+            </button>
+            <nav role="navigation" aria-label="Main navigation" class="desktop-nav">
                 <ul>
                     <li><a href="#home" aria-label="Go to Home section">Home</a></li>
                     <li><a href="#about" aria-label="Go to About section">About</a></li>
@@ -250,13 +270,13 @@
                 <div class="social-links" aria-label="Social media links">
                     <a href="https://linkedin.com/in/dhyanbaba" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile">
                         <div class="social-icon">
-                            <i class="fab fa-linkedin-in"></i>
+                            <i class="fab fa-linkedin-in" aria-hidden="true"></i>
                             <span>LinkedIn</span>
                         </div>
                     </a>
                     <a href="https://github.com/dhyan" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile">
                         <div class="social-icon">
-                            <i class="fab fa-github"></i>
+                            <i class="fab fa-github" aria-hidden="true"></i>
                             <span>GitHub</span>
                         </div>
                     </a>
@@ -269,6 +289,7 @@
     <footer role="contentinfo">
         <p><img src="assets/images/yogi.png" alt="Yoga Programmer Logo" class="inline-logo"> 2023 Narendra Kumar. No rights reserved!</p>
     </footer>
+    
     <script src="assets/scripts/main.js"></script>
 </body>
 </html> 
