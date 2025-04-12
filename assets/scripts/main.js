@@ -1,0 +1,220 @@
+// Smooth scrolling for navigation
+document.querySelectorAll('nav a').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        
+        const targetId = this.getAttribute('href');
+        const targetElement = document.querySelector(targetId);
+        
+        window.scrollTo({
+            top: targetElement.offsetTop - 70,
+            behavior: 'smooth'
+        });
+    });
+});
+
+// Dynamic year in the footer
+document.addEventListener('DOMContentLoaded', function() {
+    const footerYear = document.querySelector('footer p');
+    const currentYear = new Date().getFullYear();
+    footerYear.innerHTML = footerYear.innerHTML.replace('2023', currentYear);
+});
+
+// Toggle dark/light mode
+document.addEventListener('DOMContentLoaded', function() {
+    // Create toggle button
+    const body = document.body;
+    const toggleBtn = document.createElement('button');
+    toggleBtn.id = 'theme-toggle';
+    toggleBtn.innerHTML = '🌙';
+    toggleBtn.setAttribute('aria-label', 'Toggle Dark Mode');
+    
+    body.appendChild(toggleBtn);
+    
+    // Check for saved theme preference or respect OS preference
+    const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+    const storedTheme = localStorage.getItem('theme');
+    
+    if (storedTheme === 'dark' || (!storedTheme && prefersDarkScheme.matches)) {
+        body.classList.add('dark-mode');
+        toggleBtn.innerHTML = '☀️';
+    }
+    
+    // Toggle function
+    toggleBtn.addEventListener('click', () => {
+        body.classList.toggle('dark-mode');
+        
+        if (body.classList.contains('dark-mode')) {
+            toggleBtn.innerHTML = '☀️';
+            localStorage.setItem('theme', 'dark');
+        } else {
+            toggleBtn.innerHTML = '🌙';
+            localStorage.setItem('theme', 'light');
+        }
+    });
+});
+
+// Animate elements when they come into view
+document.addEventListener('DOMContentLoaded', function() {
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    }, { threshold: 0.1 });
+    
+    // Add the 'fade-in' class to elements you want to animate
+    document.querySelectorAll('section').forEach(section => {
+        section.classList.add('fade-in');
+        observer.observe(section);
+    });
+});
+
+// Handle contact form submission
+document.addEventListener('DOMContentLoaded', function() {
+    const contactForm = document.getElementById('contact-form');
+    
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form values
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+            
+            // Normally, you would send this data to a server
+            // For now, we'll just show a success message
+            
+            // Create success message
+            const successMessage = document.createElement('div');
+            successMessage.className = 'success-message neumorphic';
+            successMessage.setAttribute('role', 'alert');
+            successMessage.innerHTML = `
+                <p>Thanks for your message, ${name}!</p>
+                <p>I'll get back to you soon at ${email}.</p>
+            `;
+            successMessage.style.padding = '1.5rem';
+            successMessage.style.marginTop = '1.5rem';
+            
+            // Replace form with success message
+            contactForm.innerHTML = '';
+            contactForm.appendChild(successMessage);
+            
+            // Reset form after 5 seconds
+            setTimeout(() => {
+                contactForm.innerHTML = `
+                    <label for="name" class="visually-hidden">Name</label>
+                    <input type="text" id="name" placeholder="Name" required aria-required="true">
+                    
+                    <label for="email" class="visually-hidden">Email</label>
+                    <input type="email" id="email" placeholder="Email" required aria-required="true">
+                    
+                    <label for="message" class="visually-hidden">Message</label>
+                    <textarea id="message" placeholder="Message" required aria-required="true"></textarea>
+                    
+                    <button type="submit">Send</button>
+                `;
+            }, 5000);
+        });
+    }
+});
+
+// Project Toggle Functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const workToggle = document.getElementById('work-toggle');
+    const personalToggle = document.getElementById('personal-toggle');
+    const workProjects = document.getElementById('work-projects');
+    const personalProjects = document.getElementById('personal-projects');
+    
+    if (workToggle && personalToggle) {
+        workToggle.addEventListener('click', function() {
+            // Update toggle buttons
+            workToggle.classList.add('active');
+            personalToggle.classList.remove('active');
+            workToggle.setAttribute('aria-pressed', 'true');
+            personalToggle.setAttribute('aria-pressed', 'false');
+            
+            // Update project sections
+            workProjects.classList.add('active');
+            personalProjects.classList.remove('active');
+        });
+        
+        personalToggle.addEventListener('click', function() {
+            // Update toggle buttons
+            personalToggle.classList.add('active');
+            workToggle.classList.remove('active');
+            personalToggle.setAttribute('aria-pressed', 'true');
+            workToggle.setAttribute('aria-pressed', 'false');
+            
+            // Update project sections
+            personalProjects.classList.add('active');
+            workProjects.classList.remove('active');
+        });
+    }
+});
+
+// Work Experience Timeline
+document.addEventListener('DOMContentLoaded', function() {
+    const timelineItems = document.querySelectorAll('.timeline-item');
+    const timelineContents = document.querySelectorAll('.timeline-content');
+    
+    if (timelineItems.length > 0) {
+        timelineItems.forEach(item => {
+            item.addEventListener('click', function() {
+                // Remove active class from all items
+                timelineItems.forEach(i => i.classList.remove('active'));
+                timelineContents.forEach(c => c.classList.remove('active'));
+                
+                // Add active class to clicked item
+                item.classList.add('active');
+                
+                // Show corresponding content
+                const contentId = `${item.dataset.id}-content`;
+                const content = document.getElementById(contentId);
+                if (content) {
+                    content.classList.add('active');
+                }
+            });
+        });
+        
+        // Handle horizontal scrolling with mouse drag
+        const timelineTrack = document.querySelector('.timeline-track');
+        const timelineScrollContainer = document.querySelector('.timeline-scroll-container');
+        
+        if (timelineTrack && timelineScrollContainer) {
+            let isDown = false;
+            let startX;
+            let scrollLeft;
+            
+            timelineScrollContainer.addEventListener('mousedown', (e) => {
+                isDown = true;
+                timelineScrollContainer.style.cursor = 'grabbing';
+                startX = e.pageX - timelineScrollContainer.offsetLeft;
+                scrollLeft = timelineScrollContainer.scrollLeft;
+            });
+            
+            timelineScrollContainer.addEventListener('mouseleave', () => {
+                isDown = false;
+                timelineScrollContainer.style.cursor = 'grab';
+            });
+            
+            timelineScrollContainer.addEventListener('mouseup', () => {
+                isDown = false;
+                timelineScrollContainer.style.cursor = 'grab';
+            });
+            
+            timelineScrollContainer.addEventListener('mousemove', (e) => {
+                if (!isDown) return;
+                e.preventDefault();
+                const x = e.pageX - timelineScrollContainer.offsetLeft;
+                const walk = (x - startX) * 2; // Adjust scrolling speed
+                timelineScrollContainer.scrollLeft = scrollLeft - walk;
+            });
+            
+            // Add grab cursor style
+            timelineScrollContainer.style.cursor = 'grab';
+        }
+    }
+}); 

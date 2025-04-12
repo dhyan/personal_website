@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/styles/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <title>Narendra Kumar | Neumorphic Portfolio</title>
+    <!-- Add meta tags for SEO -->
+    <meta name="description" content="Personal website and portfolio of Your Name - Software Developer, Designer, and Creative Thinker">
+    <meta name="keywords" content="portfolio, web development, design, software engineer, neumorphic">
+    <meta name="author" content="Narendra Kumar">
+    <!-- Open Graph meta tags for social sharing -->
+    <meta property="og:title" content="Your Name - Personal Website">
+    <meta property="og:description" content="Portfolio and personal website of Your Name">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yourwebsite.com">
+</head>
+<body>
+    <header role="banner">
+        <div class="header-container">
+            <img src="assets/images/yogi.png" alt="Yoga Programmer Logo" class="logo">
+            <nav role="navigation" aria-label="Main navigation">
+                <ul>
+                    <li><a href="#home" aria-label="Go to Home section">Home</a></li>
+                    <li><a href="#about" aria-label="Go to About section">About</a></li>
+                    <li><a href="#portfolio" aria-label="Go to Portfolio section">Portfolio</a></li>
+                    <li><a href="#contact" aria-label="Go to Contact section">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main role="main">
+        <!-- Home Section -->
+        <section id="home" class="neumorphic" aria-labelledby="home-title">
+            <h1 id="home-title">Welcome to my digital zen garden!</h1>
+            <p>One line of code at a time <span class="cursor">_</span></p>
+            <div class="home-buttons">
+                <a href="#portfolio" class="home-button">View My Work</a>
+                <a href="#contact" class="home-button">Contact Me</a>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="neumorphic" aria-labelledby="about-title">
+            <h2 id="about-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Hi, I'm Naren. With 14+ years of software development experience, I see coding as a storyteller's medium, crafting narratives through backend logic and frontend elegance, while building friendships that truly matter!</p>
+                    <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum. Cras porttitor quam velit, vel semper nulla finibus at.</p> -->
+                    <h3 id="skills-title">My Skills</h3>
+                    <ul class="skills-list" aria-labelledby="skills-title">
+                        <li>Vue</li>
+                        <li>Ember</li>
+                        <li>Angular</li>
+                        
+                        <li>Ruby on Rails</li>
+                        <li>Python</li>
+                        <li>Azure</li>
+                        <li>AI & ML</li>
+                        
+                        
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio Section -->
+        <section id="portfolio" class="neumorphic" aria-labelledby="portfolio-title">
+            <h2 id="portfolio-title">My Projects</h2>
+            
+            <div class="project-toggle">
+                <button id="work-toggle" class="toggle-button active" aria-pressed="true" aria-label="View Work Projects">Work Projects</button>
+                <button id="personal-toggle" class="toggle-button" aria-pressed="false" aria-label="View Personal Projects">Personal Projects</button>
+            </div>
+            
+            <!-- Work Projects Section -->
+            <div id="work-projects" class="project-section active">
+                <!-- Work Experience Timeline -->
+                <div class="timeline-container">
+                    <div class="timeline-header">
+                        <p class="timeline-note"><i class="fas fa-info-circle"></i> Click on a timeline point to view details</p>
+                    </div>
+                    
+                    <div class="timeline-scroll-container">
+                        <div class="timeline-track">
+                            <!-- Timeline line segments -->
+                            <div class="timeline-line"></div>
+                            
+                            <!-- Timeline Items -->
+                            <div class="timeline-item-wrapper">
+                                <div class="timeline-item active" data-id="precisionaq">
+                                    <div class="timeline-bg"></div>
+                                    <div class="timeline-circle">Precision AQ</div>
+                                </div>
+                                <div class="timeline-year">2025</div>
+                            </div>
+                            
+                            <div class="timeline-item-wrapper">
+                                <div class="timeline-item" data-id="oracle">
+                                    <div class="timeline-bg"></div>
+                                    <div class="timeline-circle">Oracle</div>
+                                </div>
+                                <div class="timeline-year">2024</div>
+                            </div>
+                            
+                            <div class="timeline-item-wrapper">
+                                <div class="timeline-item" data-id="clarivate">
+                                    <div class="timeline-bg"></div>
+                                    <div class="timeline-circle">Clarivate</div>
+                                </div>
+                                <div class="timeline-year">2016</div>
+                            </div>
+                            
+                            <div class="timeline-item-wrapper">
+                                <div class="timeline-item" data-id="ab-innovative">
+                                    <div class="timeline-bg"></div>
+                                    <div class="timeline-circle">AB Innovative</div>
+                                </div>
+                                <div class="timeline-year">2015</div>
+                            </div>
+                            
+                            <div class="timeline-item-wrapper">
+                                <div class="timeline-item" data-id="carmatec">
+                                    <div class="timeline-bg"></div>
+                                    <div class="timeline-circle">Carmatec</div>
+                                </div>
+                                <div class="timeline-year">2011</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Timeline Content -->
+                    <div class="timeline-content-container">
+
+                        <div class="timeline-content active" id="precisionaq-content">
+                            <h3>Solution Architect (Research & Development)</h3>
+                            <h4>Precision AQ</h4>
+                            <p class="timeline-period">August 2024 - Present</p>
+                            <div class="key-contributions">
+                                <h5>Key Contributions:</h5>
+                                <ul>
+                                    <li>Leading research and development initiatives focused on innovative air quality monitoring solutions.</li>
+                                    <li>Designing and implementing cloud-based architecture for real-time data processing and analysis.</li>
+                                    <li>Collaborating with cross-functional teams to develop cutting-edge environmental monitoring systems.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- Oracle Content -->
+                        <div class="timeline-content" id="oracle-content">
+                            <h3>Software Development Manager</h3>
+                            <h4>Oracle</h4>
+                            <p class="timeline-period">March 2024 - August 2024</p>
+                            <div class="key-contributions">
+                                <h5>Key Contributions:</h5>
+                                <ul>
+                                    <li>Working with a team of 5 to develop and support Oracle University applications, which provides an online tutorial/exam platform for students at colleges and universities.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <!-- Clarivate Content -->
+                        <div class="timeline-content" id="clarivate-content">
+                            <h3>Principal Engineer</h3>
+                            <h4>Clarivate</h4>
+                            <p class="timeline-period">July 2016 - March 2024</p>
+                            <div class="key-contributions">
+                                <h5>Key Contributions:</h5>
+                                <ul>
+                                    <li>Development and architecture design of multiple products using RoR, Angular, Ember, Flask and postgres.</li>
+                                    <li>Currently managing a team of 8 awesome folks, along with managing requirements and design. Temporarily handling scrum master role as well.</li>
+                                    <li>Working on building a POC for in house reports using llm's like llama2 etc using localGPT, HuggingFace etc.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <!-- AB Innovative Content -->
+                        <div class="timeline-content" id="ab-innovative-content">
+                            <h3>Senior Software Engineer</h3>
+                            <h4>AB Innovative Pvt Ltd</h4>
+                            <p class="timeline-period">February 2015 - June 2016</p>
+                            <div class="key-contributions">
+                                <h5>Key Contributions:</h5>
+                                <ul>
+                                    <li>Twistage is a rich media application which provides customisation of all kinds of video's, image's, track's etc.</li>
+                                    <li>Worked on separating out the heavy modules and use them as independent services, which resulted into creating embedr and transcoder gems for company's private use.</li>
+                                    <li>Upgraded the product to Rails 4 and Ruby 2.</li>
+                                    <li>Worked on another application (for Reliance Jio) which kept all the medical records through web-portal, android and ios applications.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <!-- Carmatec Content -->
+                        <div class="timeline-content" id="carmatec-content">
+                            <h3>Junior Software Developer</h3>
+                            <h4>Carmatec Inc</h4>
+                            <p class="timeline-period">August 2011 - February 2015</p>
+                            <div class="key-contributions">
+                                <h5>Key Contributions:</h5>
+                                <ul>
+                                    <li>MOVE (Measurement Of Outdoor Visibility And Exposure) -> This project is a web-based interactive planning tool for media buyers, advertisers and outdoor media operators.</li>
+                                    <li>My role was to lead and develop this application, along with client communication and requirement gathering.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                            
+            </div>
+            
+            <!-- Personal Projects Section -->
+            <div id="personal-projects" class="project-section">
+                <!-- Project 1 -->
+                <article class="project-card">
+                    <h3>Predict Time Complexity of Code</h3>
+                    <p>Write any code (java etc) and the model tries to predict the asymptotic time complexity of the code.</p>
+                    <div class="project-links">
+                        <a href="https://www.youtube.com/watch?v=SxYMkueELQI" class="project-link" aria-label="Watch demo of Time Complexity Predictor" target="_blank"><i class="fab fa-youtube"></i> Watch Demo</a>
+                        <a href="https://github.com/dhyan/code2vec_code_complexity" class="github-link" aria-label="View Time Complexity Predictor source code on GitHub" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                    </div>
+                </article>
+                
+                <!-- Project 2 -->
+                <article class="project-card">
+                    <h3>HHI (Human Human Interface)</h3>
+                    <p>Demo experiment done with my room-mate! (courtesy backyard-brains)</p>
+                    <div class="project-links">
+                        <a href="https://www.youtube.com/watch?v=kBjXXEmErn4" class="project-link" aria-label="Watch demo of Human Human Interface" target="_blank"><i class="fab fa-youtube"></i> Watch Demo</a>
+                    </div>
+                </article>
+                
+                <!-- Project 3 -->
+                <article class="project-card">
+                    <h3>15 Puzzle in Ruby</h3>
+                    <p>Logic is contained in Ruby, while Gosu gives an interface to add animations.</p>
+                    <div class="project-links">
+                        <a href="https://github.com/dhyan/number_rumble" class="github-link" aria-label="View 15 Puzzle source code on GitHub" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="neumorphic" aria-labelledby="contact-title">
+            <h2 id="contact-title">Get In Touch</h2>
+            <p>Feel free to reach out if you have any questions or want to work together!</p>
+            <form id="contact-form" aria-label="Contact form">
+                <label for="name" class="visually-hidden">Name</label>
+                <input type="text" id="name" placeholder="Name" required aria-required="true">
+                
+                <label for="email" class="visually-hidden">Email</label>
+                <input type="email" id="email" placeholder="Email" required aria-required="true">
+                
+                <label for="message" class="visually-hidden">Message</label>
+                <textarea id="message" placeholder="Message" required aria-required="true"></textarea>
+                
+                <button type="submit">Send</button>
+            </form>
+            <div class="social-links" aria-label="Social media links">
+                <a href="https://github.com/dhyan" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile">
+                    <div class="social-icon">
+                        <i class="fab fa-github"></i>
+                    </div>
+                </a>
+                <a href="https://linkedin.com/in/dhyanbaba" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile">
+                    <div class="social-icon">
+                        <i class="fab fa-linkedin-in"></i>
+                    </div>
+                </a>
+            </div>
+        </section>
+    </main>
+    <footer role="contentinfo">
+        <p><img src="assets/images/yogi.png" alt="Yoga Programmer Logo" class="inline-logo"> 2023 Narendra Kumar. No rights reserved <i class="fas fa-smile"></i></p>
+    </footer>
+    <script src="assets/scripts/main.js"></script>
+</body>
+</html> 
