@@ -296,6 +296,47 @@ footer i.fa-smile {
     color: var(--hover-color);
 }
 
+.education-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 1rem;
+}
+
+.education-item {
+    padding: 1.5rem;
+    border-radius: var(--border-radius);
+    background: var(--background-color);
+    box-shadow: 5px 5px 10px var(--shadow-dark),
+                -5px -5px 10px var(--shadow-light);
+    transition: all 0.3s ease;
+}
+
+.education-item:hover {
+    box-shadow: inset 3px 3px 5px var(--shadow-dark),
+                inset -3px -3px 5px var(--shadow-light);
+    transform: translateY(2px);
+}
+
+.education-item h3 {
+    color: var(--hover-color);
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+}
+
+.education-item h4 {
+    color: var(--text-color);
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    font-weight: normal;
+}
+
+.education-period {
+    color: var(--text-color);
+    font-style: italic;
+    font-size: 0.9rem;
+}
+
 /* Portfolio Section */
 .projects-container {
     display: grid;

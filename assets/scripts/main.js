@@ -23,9 +23,11 @@ document.addEventListener('DOMContentLoaded', function() {
     // Smooth scrolling for home buttons (these work the same on all screen sizes)
     document.querySelectorAll('.home-buttons a').forEach(button => {
         button.addEventListener('click', function(e) {
-            e.preventDefault();
-            
             const targetId = this.getAttribute('href');
+            // Only handle smooth scrolling for navigation links
+            if (!targetId.startsWith('#')) return;
+            
+            e.preventDefault();
             const targetElement = document.querySelector(targetId);
             
             // Get header height for proper offset calculation

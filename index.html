@@ -45,6 +45,7 @@
                     <li><a href="#home" aria-label="Go to Home section">Home</a></li>
                     <li><a href="#about" aria-label="Go to About section">About</a></li>
                     <li><a href="#portfolio" aria-label="Go to Portfolio section">Projects</a></li>
+                    <li><a href="#education" aria-label="Go to Education section">Studies</a></li>
                     <li><a href="#contact" aria-label="Go to Contact section">Contact</a></li>
                 </ul>
             </nav>
@@ -54,10 +55,11 @@
         <!-- Home Section -->
         <section id="home" class="neumorphic" aria-labelledby="home-title">
             <h1 id="home-title">Welcome to my digital zen garden!</h1>
-            <p>14+ years of coding, leading, and occasionally convincing machines to cooperate <span class="cursor">_</span></p>
+            <p>14+ years of coding, leading, and occasionally convincing machines to cooperate!</p>
             <div class="home-buttons">
                 <a href="#portfolio" class="home-button">View My Work</a>
                 <a href="#contact" class="home-button">Contact Me</a>
+                <a href="assets/downloads/resume.pdf" target="_blank" class="home-button" aria-label="Open my resume in new tab"><i class="fas fa-external-link-alt"></i> View Resume</a>
             </div>
         </section>
 
@@ -66,14 +68,13 @@
             <h2 id="about-title">About Me</h2>
             <div class="about-content">
                 <div class="about-text">
-                    <p>Hi, I'm Naren. I have been learning to see coding as a storyteller's medium, crafting narratives through backend logic and frontend elegance, while building friendships that truly mean a lot!</p>
+                    <p>Hi, I'm Naren. For the rest of myself, am still trying to figure that out <span class="cursor">_</span></p>
                     <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum. Cras porttitor quam velit, vel semper nulla finibus at.</p> -->
                     <h3 id="skills-title">Skills</h3>
                     <ul class="skills-list" aria-labelledby="skills-title">
                         <li>Vue</li>
                         <li>Ember</li>
                         <li>Angular</li>
-                        
                         <li>Ruby on Rails</li>
                         <li>Python</li>
                         <li>Azure</li>
@@ -90,7 +91,7 @@
             <h2 id="portfolio-title">Projects</h2>
             
             <div class="project-toggle">
-                <button id="work-toggle" class="toggle-button active" aria-pressed="true" aria-label="View Work Projects">Work</button>
+                <button id="work-toggle" class="toggle-button active" aria-pressed="true" aria-label="View Work Projects">Professional</button>
                 <button id="personal-toggle" class="toggle-button" aria-pressed="false" aria-label="View Personal Projects">Personal</button>
             </div>
             
@@ -237,7 +238,16 @@
                     <p>Write any code (java etc) and the model tries to predict the asymptotic time complexity of the code.</p>
                     <div class="project-links">
                         <a href="https://www.youtube.com/watch?v=SxYMkueELQI" class="project-link" aria-label="Watch demo of Time Complexity Predictor" target="_blank"><i class="fab fa-youtube"></i>   Demo</a>
-                        <a href="https://github.com/dhyan/code2vec_code_complexity" class="github-link" aria-label="View Time Complexity Predictor source code on GitHub" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                        <a href="https://github.com/dhyan/code2vec_code_complexity" class="project-link" aria-label="View Time Complexity Predictor source code on GitHub" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                        <a href="assets/downloads/narendra_kumar.docx" class="project-link" aria-label="Download thesis document (Word format)" download><i class="fas fa-download"></i> Download Thesis</a>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <h3>Deep-fake</h3>
+                    <p>Demo experiment with images and deep-fake</p>
+                    <div class="project-links">
+                        <a href="https://www.youtube.com/watch?v=MXLPqb-wNIA" class="project-link" aria-label="Watch demo of deep-fake" target="_blank"><i class="fab fa-youtube"></i>   Demo</a>
                     </div>
                 </article>
                 
@@ -258,6 +268,23 @@
                         <a href="https://github.com/dhyan/number_rumble" class="github-link" aria-label="View 15 Puzzle source code on GitHub" target="_blank"><i class="fab fa-github"></i> GitHub</a>
                     </div>
                 </article>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education" class="neumorphic" aria-labelledby="education-title">
+            <h2 id="education-title">Studies</h2>
+            <div class="education-content">
+                <div class="education-item">
+                    <h3>MSc (Artificial Intelligence and Machine Learning)</h3>
+                    <h4>IIIT Bengaluru - LJMU</h4>
+                    <p class="education-period">06/2021</p>
+                </div>
+                <div class="education-item">
+                    <h3>BE (Computer Science and Engineering)</h3>
+                    <h4>SVCE, Bengaluru</h4>
+                    <p class="education-period">06/2011</p>
+                </div>
             </div>
         </section>
 
