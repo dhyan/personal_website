@@ -331,6 +331,29 @@ footer i.fa-smile {
     font-weight: normal;
 }
 
+/* .education-item h5 {
+    margin-bottom: 0.5rem;
+    color: var(--text-color);
+    font-weight: 500;
+    font-size: 0.875rem;
+} */
+
+.education-item h6 {
+    margin: 0.5rem 0;
+    padding-left: 1rem;
+    position: relative;
+    list-style-type: none;
+    font-weight: 500;
+}
+
+.education-item h6::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: var(--hover-color);
+    /* font-size: 1.2em; */
+}
+
 .education-period {
     color: var(--text-color);
     font-style: italic;

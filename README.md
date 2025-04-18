@@ -1,6 +1,10 @@
 # Personal Website
 
-Completely vibe code with a beer over the weekend!
+Completely vibe coded during a weekend with pints of beer!
+
+## Demo
+
+[Check it out!](https://dhyan.github.io/personal_website/)
 
 ## Running Locally
 
@@ -12,4 +16,4 @@ Feel free to use this template for your personal website. Attribution is appreci
 
 ---
 
-Happy vibing! 
+Good Vibes! 
